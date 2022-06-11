@@ -32,8 +32,14 @@
   --mainPadding: 17px;
   --mainColor: #11cab8;
   --secondaryColor: #26474e;
+  --threeTensTransition: 0.3s ease-out;
+  --sectionBgColor: #fafafa;
 }
 /* * Global Rules * */
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -50,7 +56,6 @@ body {
   margin-right: auto;
   padding-left: var(--mainPadding);
   padding-right: var(--mainPadding);
-  /* background-color: #ddd; */
 }
 
 /* Screens */
@@ -117,7 +122,7 @@ nav .burger-icon span:nth-child(2) {
 
 nav:hover .burger-icon span:nth-child(2) {
   width: 100%;
-  transition: 0.3s;
+  transition: var(--threeTensTransition);
 }
 
 nav {
@@ -159,7 +164,7 @@ nav ul li:not(:last-child) {
 
 nav ul li:hover a {
   padding-left: 27px;
-  transition: 0.3s ease-out;
+  transition: var(--threeTensTransition);
 }
 
 nav ul li a {
@@ -314,7 +319,7 @@ nav ul li a {
 /* * Portfolio Section * */
 
 .portfolio {
-  background-color: #fafafa;
+  background-color: var(--sectionBgColor);
 }
 
 .portfolio .placeholder-img {
@@ -442,7 +447,7 @@ nav ul li a {
 /* * Contact Section * */
 
 .contact {
-  background-color: #fafafa;
+  background-color: var(--sectionBgColor);
   padding-bottom: 100px;
 }
 
